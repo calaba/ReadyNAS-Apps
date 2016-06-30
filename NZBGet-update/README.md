@@ -68,11 +68,15 @@ To update to another release version (including not released testing versions):
 	
 2) Check all versions including tetsing versions here - https://github.com/nzbget/nzbget/releases
 
+3) Then drun the repackaging scenario with the URL pointing to the release of nzbget you wnat to use:
+
+	./repackage-latest-nzbget-for-ReadyNAS.sh <download_url_for_nzbget-16.4-bin-linux.run> nzbget-app_1.0.4_all
+
 =========
 COMMENTS:
 =========
 
-1) The script is updating nzbget binaries and web application files in the base package
+1) The script is merging the latest nzbget binaries and web application files with the files contaiined in the base package
 	
 2) The script is NOT updating the nzbget.conf file (located in the .deb package and in /etc/nzbget.conf after inmstallation). That means that if there will be backward-incompatible change in the nzbget.conf this script might need to be updated.
 
